@@ -299,7 +299,7 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
-$config['rest_keys_table'] = 'WFADMIN.KEYS';
+$config['rest_keys_table'] = 'apikeys';
 
 /*
 |--------------------------------------------------------------------------
@@ -335,7 +335,7 @@ $config['rest_enable_keys'] = TRUE;
 | column name to match e.g. my_key
 |
 */
-$config['rest_key_column'] = 'API_KEY';
+$config['rest_key_column'] = 'api_key';
 
 /*
 |--------------------------------------------------------------------------

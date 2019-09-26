@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	['dbprefix'] You can add an optional prefix, which will be added
 |				 to the table name when using the  Query Builder class
 |	['pconnect'] TRUE/FALSE - Whether to use a persistent connection
-|	['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
+|	['db_debug'] TUE/FALSE - Whether database errors should be displayed.
 |	['cache_on'] TRUE/FALSE - Enables/disables query caching
 |	['cachedir'] The path to the folder where cache files should be stored
 |	['char_set'] The character set used in communicating with the database
@@ -72,21 +72,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-$tsn = "
+/*$tsn = "
   (DESCRIPTION =
     (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))
     (CONNECT_DATA =
       (SID = ORCL)
     )
   )
-";
+";*/
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $tsn,
-	'username' => 'TASKTRACKER',
-	'password' => 'tasktracker_123',
-	'database' => '',
-	'dbdriver' => 'oci8',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'patientdb',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
